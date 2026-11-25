@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Member Login | JIBWIS</title>
+
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+<div class="auth-wrapper">
+
+  <div class="auth-box">
+
+    <img src="assets/icon.png" class="logo" alt="JIBWIS Logo">
+
+    <!-- LOGIN -->
+
+    <div id="loginSection">
+
+      <div class="auth-heading">
+        <h2>Welcome Back</h2>
+        <p>JIBWIS Digital Management System</p>
+      </div>
+
+      <form id="loginForm">
+
+        <label class="field-label">Email Address</label>
+
+        <input
+          class="field"
+          type="email"
+          id="loginEmail"
+          placeholder="Enter your email"
+          autocomplete="email"
+          required
+        >
+
+        <label class="field-label">Password</label>
+
+        <input
+          class="field"
+          type="password"
+          id="loginPassword"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required
+        >
+
+        <div class="auth-links">
+
+          <label>
+            <input type="checkbox" id="rememberMe">
+            Remember me
+          </label>
+
+          <a href="#" id="forgotLink">Forgot password?</a>
+
+        </div>
+
+        <button class="primary-btn" id="loginButton" type="submit">
+          Sign In
+        </button>
+
+        <div id="loginStatus" class="status"></div>
+
+      </form>
+
+      <div class="divider"></div>
+
+      <p class="bottom-text">
+        Don't have an account?
+        <a href="register.html"><b>Register Now</b></a>
+      </p>
+
+    </div>
+
+
+    <!-- FORGOT PASSWORD -->
+
+    <div id="forgotSection" class="hidden">
+
+      <div class="auth-heading">
+        <h2>Reset Password</h2>
+
+        <p>
+          Enter your registered email address.
+          We'll send you a password reset link.
+        </p>
+      </div>
+
+      <form id="resetForm">
+
+        <label class="field-label">Email Address</label>
+
+        <input
+          class="field"
+          type="email"
+          id="resetEmail"
+          placeholder="Enter your registered email"
+          required
+        >
+
+        <button class="primary-btn" id="resetButton" type="submit">
+          Send Reset Link
+        </button>
+
+        <div id="resetStatus" class="status"></div>
+
+      </form>
+
+      <p class="bottom-text">
+        <a href="#" id="backToLogin">← Back to Login</a>
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="support">
+      Official JIBWIS Digital Management System
+      <br>
+      For technical assistance:
+      <br>
+      <a href="mailto:fagofjibwiswebsite@gmail.com">
+        Contact Website Support
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+<script type="module" src="js/auth.js"></script>
+
+</body>
+</html>
