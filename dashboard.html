@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JIBWIS Member Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-logo">J</div>
+      <div>
+        <h2>JIBWIS</h2>
+        <small>Digital Management System</small>
+      </div>
+    </div>
+
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">MEMBER PORTAL</p>
+        <h1>Welcome, <span id="memberName">Member</span></h1>
+        <p>Your organisation. Your information. Your connection.</p>
+      </div>
+      <div class="member-badge">ACTIVE MEMBER</div>
+    </section>
+
+    <section class="quick-stats">
+      <div class="stat-card">
+        <span>Membership ID</span>
+        <strong id="memberId">Loading...</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>Division</span>
+        <strong id="memberDivision">Loading...</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>Membership Status</span>
+        <strong>Registered</strong>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PERSONAL INFORMATION</p>
+          <h2>My Profile</h2>
+        </div>
+        <button id="editProfileBtn" class="outline-btn">Edit Profile</button>
+      </div>
+
+      <div class="profile-card">
+        <div class="avatar" id="memberAvatar">J</div>
+
+        <div class="profile-details">
+          <h3 id="profileName">Loading...</h3>
+          <p id="profileEmail">Loading...</p>
+
+          <div class="details-grid">
+            <div><small>Phone</small><strong id="profilePhone">—</strong></div>
+            <div><small>State</small><strong id="profileState">—</strong></div>
+            <div><small>LGA</small><strong id="profileLga">—</strong></div>
+            <div><small>Rank</small><strong id="profileRank">—</strong></div>
+            <div><small>Detachment</small><strong id="profileDetachment">—</strong></div>
+            <div><small>Unit</small><strong id="profileUnit">—</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <form id="profileForm" class="edit-form hidden">
+        <h3>Update Personal Details</h3>
+
+        <label>Full Name</label>
+        <input id="editName" type="text" required>
+
+        <label>Phone Number</label>
+        <input id="editPhone" type="tel" required>
+
+        <label>Email Address</label>
+        <input id="editEmail" type="email" disabled>
+
+        <p class="form-note">
+          Membership ID, rank, division and other official membership
+          records cannot be changed from this form.
+        </p>
+
+        <div class="form-actions">
+          <button type="submit" class="primary-btn">Save Changes</button>
+          <button type="button" id="cancelEditBtn" class="outline-btn">Cancel</button>
+        </div>
+
+        <p id="profileMessage"></p>
+      </form>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">STAY CONNECTED</p>
+          <h2>Member Services</h2>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <a href="#announcements" class="service-card">
+          <div class="service-icon">📢</div>
+          <h3>Announcements</h3>
+          <p>Important organisational updates.</p>
+        </a>
+
+        <a href="#events" class="service-card">
+          <div class="service-icon">📅</div>
+          <h3>Events</h3>
+          <p>Meetings, programmes and activities.</p>
+        </a>
+
+        <a href="#lectures" class="service-card">
+          <div class="service-icon">📚</div>
+          <h3>Lectures</h3>
+          <p>Islamic lectures and learning materials.</p>
+        </a>
+
+        <a href="#directory" class="service-card">
+          <div class="service-icon">👥</div>
+          <h3>Member Directory</h3>
+          <p>Connect with other registered members.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section content-section" id="announcements">
+      <p class="eyebrow">LATEST UPDATES</p>
+      <h2>Announcements</h2>
+      <div class="empty-card">
+        <h3>Announcements will appear here</h3>
+        <p>Official updates will be published by authorised administrators.</p>
+      </div>
+    </section>
+
+    <section class="section content-section" id="events">
+      <p class="eyebrow">WHAT'S HAPPENING</p>
+      <h2>Upcoming Events</h2>
+      <div class="empty-card">
+        <h3>No events available yet</h3>
+        <p>Upcoming organisational events will appear here.</p>
+      </div>
+    </section>
+
+    <section class="section content-section" id="lectures">
+      <p class="eyebrow">LEARNING CENTRE</p>
+      <h2>Lectures</h2>
+      <div class="empty-card">
+        <h3>Learning materials will appear here</h3>
+        <p>Lectures and educational resources will be added by administrators.</p>
+      </div>
+    </section>
+
+    <section class="section content-section" id="directory">
+      <p class="eyebrow">OUR COMMUNITY</p>
+      <h2>Member Directory</h2>
+      <div class="empty-card">
+        <h3>Member directory coming soon</h3>
+        <p>Only approved member information will be displayed here.</p>
+      </div>
+    </section>
+
+    <section class="admin-notice hidden" id="adminNotice">
+      <h3>Administrative Access</h3>
+      <p>Your account has an authorised administrative role.</p>
+      <a href="admin.html" class="primary-btn">Open Admin Dashboard</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>JIBWIS Digital Management System</p>
+    <small>Connecting members through technology.</small>
+  </footer>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
