@@ -1,0 +1,436 @@
+:root {
+  --blue: #173b63;
+  --dark-blue: #102b49;
+  --tan: #d8bd91;
+  --light-tan: #f5eee2;
+  --white: #ffffff;
+  --text: #263445;
+  --muted: #718096;
+  --border: #e6e9ee;
+  --background: #f7f8fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.topbar {
+  background: var(--white);
+  padding: 15px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  width: 45px;
+  height: 45px;
+  background: var(--blue);
+  color: var(--tan);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.brand h2 {
+  color: var(--blue);
+  font-size: 19px;
+}
+
+.brand small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.logout-btn {
+  background: var(--light-tan);
+  border: 1px solid var(--tan);
+  color: var(--blue);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.container {
+  width: 88%;
+  max-width: 1150px;
+  margin: 35px auto;
+}
+
+.welcome {
+  background: linear-gradient(120deg, var(--dark-blue), var(--blue));
+  color: white;
+  border-radius: 16px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.welcome h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.welcome p {
+  color: #e0e8f0;
+}
+
+.eyebrow {
+  color: #a98755;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.welcome .eyebrow {
+  color: var(--tan);
+}
+
+.member-badge {
+  background: var(--tan);
+  color: var(--dark-blue);
+  padding: 9px 15px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 22px 0;
+}
+
+.stat-card,
+.profile-card,
+.service-card,
+.empty-card,
+.edit-form {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 22px;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: 13px;
+  display: block;
+}
+
+.stat-card strong {
+  color: var(--blue);
+  font-size: 19px;
+  display: block;
+  margin-top: 7px;
+}
+
+.section {
+  margin-top: 35px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  gap: 15px;
+}
+
+.section-heading h2,
+.content-section h2 {
+  color: var(--blue);
+  font-size: 23px;
+}
+
+.outline-btn {
+  background: white;
+  color: var(--blue);
+  border: 1px solid var(--tan);
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profile-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.avatar {
+  width: 75px;
+  height: 75px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--light-tan);
+  color: var(--blue);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.profile-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-details h3 {
+  color: var(--blue);
+  font-size: 20px;
+}
+
+.profile-details > p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.details-grid small {
+  color: var(--muted);
+  display: block;
+}
+
+.details-grid strong {
+  color: var(--text);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+  margin-top: 18px;
+}
+
+.service-card {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.2s;
+}
+
+.service-card:hover {
+  border-color: var(--tan);
+  transform: translateY(-3px);
+}
+
+.service-icon {
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  color: var(--blue);
+  font-size: 16px;
+}
+
+.service-card p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+.content-section {
+  scroll-margin-top: 25px;
+}
+
+.empty-card {
+  margin-top: 15px;
+}
+
+.empty-card h3 {
+  color: var(--blue);
+  font-size: 16px;
+}
+
+.empty-card p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.edit-form {
+  margin-top: 15px;
+}
+
+.edit-form h3 {
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.edit-form label {
+  display: block;
+  font-size: 13px;
+  margin: 12px 0 5px;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  outline: none;
+}
+
+.edit-form input:focus {
+  border-color: var(--blue);
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 17px;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#profileMessage {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.admin-notice {
+  background: var(--light-tan);
+  border: 1px solid var(--tan);
+  padding: 22px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.admin-notice h3 {
+  color: var(--blue);
+}
+
+.admin-notice p {
+  margin: 5px 0 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 45px;
+  background: white;
+}
+
+footer small {
+  font-size: 11px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 92%;
+    margin-top: 20px;
+  }
+
+  .topbar {
+    padding: 12px 4%;
+  }
+
+  .welcome {
+    padding: 25px 20px;
+    display: block;
+  }
+
+  .welcome h1 {
+    font-size: 24px;
+  }
+
+  .member-badge {
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .quick-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .profile-card {
+    display: block;
+  }
+
+  .avatar {
+    margin-bottom: 15px;
+  }
+
+  .services-grid {
+    gap: 10px;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+
+  .section-heading h2,
+  .content-section h2 {
+    font-size: 20px;
+  }
+}
