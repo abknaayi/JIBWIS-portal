@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Member Registration | JIBWIS</title>
+
+  <link rel="stylesheet" href="css/auth.css">
+
+</head>
+
+<body>
+
+<div class="auth-wrapper">
+
+  <div class="auth-box">
+
+    <img src="assets/icon.png" class="logo" alt="JIBWIS Logo">
+
+    <div class="auth-heading">
+
+      <h2>Member Registration</h2>
+
+      <p>
+        Create your account on the JIBWIS Digital Management System.
+      </p>
+
+    </div>
+
+
+    <form id="registerForm">
+
+      <label class="field-label">Full Name</label>
+
+      <input
+        class="field"
+        type="text"
+        id="fullName"
+        placeholder="Enter your full name"
+        required
+      >
+
+
+      <label class="field-label">Email Address</label>
+
+      <input
+        class="field"
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+        required
+      >
+
+
+      <label class="field-label">Phone Number</label>
+
+      <input
+        class="field"
+        type="tel"
+        id="phone"
+        placeholder="Enter your phone number"
+        required
+      >
+
+
+      <div class="row">
+
+        <div>
+
+          <label class="field-label">Password</label>
+
+          <input
+            class="field"
+            type="password"
+            id="password"
+            placeholder="Password"
+            minlength="6"
+            required
+          >
+
+        </div>
+
+        <div>
+
+          <label class="field-label">Confirm Password</label>
+
+          <input
+            class="field"
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm"
+            minlength="6"
+            required
+          >
+
+        </div>
+
+      </div>
+
+
+      <div class="divider"></div>
+
+      <h3 style="color:#173d63;font-size:16px;">
+        Membership Information
+      </h3>
+
+
+      <label class="field-label">Country</label>
+
+      <select class="field" id="country" required>
+
+        <option value="Nigeria">Nigeria</option>
+
+      </select>
+
+
+      <label class="field-label">State</label>
+
+      <select class="field" id="state" required>
+
+        <option value="">Select State</option>
+
+      </select>
+
+
+      <label class="field-label">Local Government Area</label>
+
+      <select class="field" id="lga" required>
+
+        <option value="">Select LGA</option>
+
+      </select>
+
+
+      <label class="field-label">Division</label>
+
+      <select class="field" id="division" required>
+
+        <option value="">Select Division</option>
+
+      </select>
+
+
+      <label class="field-label">Detachment</label>
+
+      <select class="field" id="detachment" required>
+
+        <option value="">Select Detachment</option>
+
+      </select>
+
+
+      <label class="field-label">Unit</label>
+
+      <select class="field" id="unit" required>
+
+        <option value="">Select Unit</option>
+
+      </select>
+
+
+      <div class="row">
+
+        <div>
+
+          <label class="field-label">Member ID</label>
+
+          <input
+            class="field"
+            type="text"
+            id="idNumber"
+            placeholder="If assigned"
+          >
+
+        </div>
+
+        <div>
+
+          <label class="field-label">Current Rank</label>
+
+          <input
+            class="field"
+            type="text"
+            id="rank"
+            placeholder="If applicable"
+          >
+
+        </div>
+
+      </div>
+
+
+      <label class="terms">
+
+        <input type="checkbox" id="terms" required>
+
+        <span>
+          I confirm that the information provided is correct
+          and agree to the registration terms.
+        </span>
+
+      </label>
+
+
+      <button class="primary-btn" id="registerButton" type="submit">
+
+        Create Account
+
+      </button>
+
+
+      <div id="registerStatus" class="status"></div>
+
+    </form>
+
+
+    <p class="bottom-text">
+
+      Already registered?
+
+      <a href="login.html"><b>Sign In</b></a>
+
+    </p>
+
+
+  </div>
+
+</div>
+
+
+<script type="module" src="js/register.js"></script>
+
+</body>
+</html>
